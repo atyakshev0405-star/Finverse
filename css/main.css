@@ -1,0 +1,328 @@
+/* Main Styles - Основные стили */
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height-normal);
+    color: var(--dark);
+    font-size: var(--font-size-base);
+}
+
+/* Section Styles */
+section {
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-4xl);
+}
+
+.section-badge {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    color: var(--primary);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--dark);
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.5px;
+}
+
+.section-header p {
+    font-size: var(--font-size-xl);
+    color: var(--gray);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Button Styles */
+.btn-primary {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background: #FFFFFF;
+    color: #5568d3;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-extrabold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 2px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(102, 126, 234, 0.5),
+        0 0 0 3px rgba(255, 255, 255, 0.5);
+    background: #FFFFFF;
+    color: #4556c0;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background: transparent;
+    color: var(--light);
+    border: 2px solid var(--light);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: var(--light);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Container Utility */
+.container {
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 100px var(--spacing-xl);
+    background: var(--light);
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-3xl);
+    margin-top: 80px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    color: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    margin: 0 auto var(--spacing-xl);
+    box-shadow: var(--shadow-primary);
+}
+
+.step h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    color: var(--dark);
+}
+
+.step p {
+    color: var(--gray);
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-lg);
+}
+
+/* Gamification Section */
+.gamification {
+    padding: 100px var(--spacing-xl);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 40%, #f093fb 80%, #ffd700 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.gamification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.2) 0%, transparent 50%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 1;
+    animation: gamificationBg 15s ease-in-out infinite;
+}
+
+@keyframes gamificationBg {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, 20px) scale(1.1); }
+}
+
+.gamification-container {
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.gamification h2 {
+    color: var(--light);
+}
+
+.gamification .section-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--light);
+}
+
+.gamification p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: 60px;
+}
+
+.badge-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    transition: all var(--transition-base);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.badge-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.badge-emoji {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto var(--spacing-md);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.badge-title {
+    color: var(--light);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.badge-desc {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px var(--spacing-xl);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 70%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 1;
+    animation: ctaPulse 8s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h2 {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--light);
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: -0.5px;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: var(--spacing-2xl);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--transition-slow);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

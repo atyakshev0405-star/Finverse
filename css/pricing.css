@@ -1,0 +1,160 @@
+/* Pricing Section Styles */
+
+.pricing {
+    padding: 100px var(--spacing-xl);
+    background: var(--light-bg);
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: 60px;
+}
+
+.pricing-card {
+    background: var(--light);
+    padding: var(--spacing-3xl);
+    border-radius: 25px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.pricing-card.featured {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: var(--light);
+    transform: scale(1.08);
+    border: 3px solid rgba(255, 215, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card.featured::before {
+    content: 'ПОПУЛЯРНО';
+    position: absolute;
+    top: 18px;
+    right: -42px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    color: #1a1a2e;
+    padding: 15px 35px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.6);
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.08) translateY(-10px);
+    box-shadow: 
+        0 30px 80px rgba(102, 126, 234, 0.4),
+        0 0 40px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.8);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.pricing-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+}
+
+.pricing-card.featured .pricing-title {
+    color: var(--light);
+}
+
+.pricing-price {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.pricing-card.featured .pricing-price {
+    color: var(--light);
+}
+
+.pricing-period {
+    color: var(--gray);
+    font-size: var(--font-size-base);
+}
+
+.pricing-card.featured .pricing-period {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-features {
+    list-style: none;
+    margin: var(--spacing-xl) 0;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray);
+}
+
+.pricing-card.featured .pricing-features li {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.pricing-features li::before {
+    content: '✓';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-primary);
+    color: var(--light);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+}
+
+.pricing-card.featured .pricing-features li::before {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.pricing-button {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: var(--gradient-primary);
+    color: var(--light);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.pricing-card.featured .pricing-button {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.pricing-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}

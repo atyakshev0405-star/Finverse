@@ -1,0 +1,42 @@
+/* Stats Section Styles */
+
+.stats {
+    padding: 100px var(--spacing-xl);
+    background: var(--gradient-light);
+}
+
+.stats-container {
+    max-width: var(--container-2xl);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-3xl);
+}
+
+.stat-box {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-extrabold);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-sm);
+    animation: gradientShift 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.stat-text {
+    font-size: var(--font-size-lg);
+    color: var(--gray);
+    font-weight: var(--font-weight-medium);
+}

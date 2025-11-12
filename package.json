@@ -1,0 +1,51 @@
+{
+  "name": "finverse-website",
+  "version": "1.0.0",
+  "description": "FinVerse - Вселенная умных финансов. Современный веб-сайт для финтех-приложения.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx live-server --port=8000",
+    "build": "npm run minify:css && npm run minify:js",
+    "minify:css": "npx clean-css-cli -o dist/style.min.css css/*.css",
+    "minify:js": "npx terser js/*.js -o dist/script.min.js",
+    "lint:css": "npx stylelint 'css/**/*.css'",
+    "lint:js": "npx eslint 'js/**/*.js'",
+    "format": "npx prettier --write '**/*.{html,css,js,md}'",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "fintech",
+    "finance",
+    "crypto",
+    "budget",
+    "education",
+    "gamification",
+    "landing-page",
+    "website"
+  ],
+  "author": "FinVerse Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/finverse-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/finverse-website/issues"
+  },
+  "homepage": "https://finverse.app",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.26.0",
+    "stylelint": "^16.1.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

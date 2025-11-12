@@ -1,0 +1,222 @@
+/* Responsive Styles - Адаптивный дизайн */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-container {
+        gap: var(--spacing-3xl);
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .features-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 100px var(--spacing-md) 60px;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .phone-mockup {
+        max-width: 300px;
+        height: 600px;
+    }
+    
+    /* Section Headers */
+    .section-header h2 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .section-header p {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Features */
+    .features {
+        padding: 60px var(--spacing-md);
+    }
+    
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    /* Stats */
+    .stats {
+        padding: 60px var(--spacing-md);
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-5xl);
+    }
+    
+    /* Steps */
+    .how-it-works {
+        padding: 60px var(--spacing-md);
+    }
+    
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+        margin-top: 40px;
+    }
+    
+    /* Gamification */
+    .gamification {
+        padding: 60px var(--spacing-md);
+    }
+    
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    /* Pricing */
+    .pricing {
+        padding: 60px var(--spacing-md);
+    }
+    
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    
+    /* CTA */
+    .cta-section {
+        padding: 60px var(--spacing-md);
+    }
+    
+    .cta-content h2 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .cta-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Footer */
+    footer {
+        padding: 40px var(--spacing-md) 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.875rem var(--spacing-xl);
+        font-size: var(--font-size-base);
+    }
+    
+    .phone-mockup {
+        max-width: 280px;
+        height: 560px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .badges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-3xl);
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+    .hero {
+        padding: 80px var(--spacing-md) 40px;
+    }
+    
+    .phone-mockup {
+        max-width: 250px;
+        height: 500px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    .hero-image,
+    .cta-section,
+    footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero {
+        background: white;
+        color: black;
+    }
+    
+    * {
+        box-shadow: none !important;
+    }
+}
