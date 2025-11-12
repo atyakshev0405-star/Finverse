@@ -87,25 +87,6 @@ open index.html
 # ИЛИ запустите локальный сервер
 python -m http.server 8000
 # Откройте http://localhost:8000
-```
-
-### Деплой на Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/atyakshev0405-star/Finverse)
-
-**Или через CLI:**
-
-```bash
-# Установите Vercel CLI
-npm i -g vercel
-
-# Деплой
-vercel
-
-# Production деплой
-vercel --prod
-```
-
 ---
 
 ## 📁 Структура проекта
