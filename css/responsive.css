@@ -73,6 +73,11 @@
         transform: none;
         animation: none;
     }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
     
     /* Section Headers */
     .section-header h2 {
