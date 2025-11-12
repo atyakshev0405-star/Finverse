@@ -17,11 +17,25 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-    /* Navigation */
-    .nav-links {
-        display: none;
+    .phone-mockup {
+        max-width: 280px;
+        height: 560px;
     }
-    
+}
+
+@media (max-width: 480px) {
+    .phone-mockup {
+        max-width: 260px;
+        height: 520px;
+    }
+}
+
+@media (max-width: 360px) {
+    .phone-mockup {
+        max-width: 240px;
+        height: 480px;
+    }
+}
     .mobile-menu-toggle {
         display: flex;
     }
@@ -49,10 +63,7 @@
         justify-content: center;
     }
     
-    .phone-mockup {
-        max-width: 300px;
-        height: 600px;
-    }
+
     
     /* Section Headers */
     .section-header h2 {
@@ -147,7 +158,6 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
     }
-}
 
 /* Small Mobile */
 @media (max-width: 480px) {
