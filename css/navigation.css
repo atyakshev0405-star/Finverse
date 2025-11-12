@@ -130,21 +130,16 @@ nav.scrolled {
 }
 
 /* Mobile Menu Toggle */
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex; /* Показываем */
-    }
-    
-    .nav-links {
-        position: fixed;
-        right: -100%;
-        transition: right 0.4s;
-    }
-    
-    .nav-links.active {
-        right: 0; /* Выезжает */
-    }
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
+
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
