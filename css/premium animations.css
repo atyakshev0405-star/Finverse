@@ -1,0 +1,651 @@
+/* Premium Animations - Дорогие анимации для премиального вида */
+
+/* ===== HERO SECTION ANIMATIONS ===== */
+
+/* Floating particles background */
+@keyframes floatingParticles {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) rotate(90deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-40px) translateX(-10px) rotate(180deg);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translateY(-20px) translateX(-15px) rotate(270deg);
+        opacity: 0.6;
+    }
+}
+
+/* Создаём плавающие частицы для Hero секции */
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 50px 50px, 80px 80px, 100px 100px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: floatingParticles 30s linear infinite;
+    pointer-events: none;
+}
+
+/* Glowing text effect for hero title */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.5),
+            0 0 40px rgba(255, 255, 255, 0.3),
+            0 0 60px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px rgba(255, 255, 255, 0.8),
+            0 0 60px rgba(255, 255, 255, 0.5),
+            0 0 90px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.hero-content h1 {
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+/* Phone mockup 3D rotation */
+@keyframes phone3DRotate {
+    0%, 100% {
+        transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(0);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(5deg) rotateX(-2deg) translateY(-20px);
+    }
+}
+
+.phone-mockup {
+    animation: phone3DRotate 8s ease-in-out infinite !important;
+    transform-style: preserve-3d;
+}
+
+/* Screen glow effect */
+@keyframes screenGlow {
+    0%, 100% {
+        box-shadow: 
+            0 30px 80px rgba(0, 0, 0, 0.4),
+            0 0 40px rgba(102, 126, 234, 0.3),
+            inset 0 0 50px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 30px 80px rgba(0, 0, 0, 0.4),
+            0 0 80px rgba(240, 147, 251, 0.6),
+            inset 0 0 80px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.phone-screen {
+    animation: screenGlow 4s ease-in-out infinite;
+}
+
+/* ===== STATS SECTION ANIMATIONS ===== */
+
+/* Number counting shimmer */
+@keyframes numberShimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.stat-number {
+    background: linear-gradient(
+        90deg,
+        #667eea 0%,
+        #764ba2 25%,
+        #f093fb 50%,
+        #764ba2 75%,
+        #667eea 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: numberShimmer 3s linear infinite;
+}
+
+/* Stat box hover effect */
+.stat-box {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-15px) scale(1.05);
+}
+
+.stat-box:hover::before {
+    opacity: 1;
+}
+
+/* ===== FEATURE CARDS ANIMATIONS ===== */
+
+/* 3D card flip on hover */
+.feature-card {
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+}
+
+.feature-card:hover {
+    transform: translateY(-20px) rotateX(5deg) scale(1.03);
+}
+
+/* Icon morphing animation */
+@keyframes iconMorph {
+    0%, 100% {
+        border-radius: 18px;
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: rotate(90deg) scale(1.1);
+    }
+    50% {
+        border-radius: 50%;
+        transform: rotate(180deg) scale(0.95);
+    }
+    75% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+        transform: rotate(270deg) scale(1.1);
+    }
+}
+
+.feature-icon {
+    animation: iconMorph 8s ease-in-out infinite;
+}
+
+.feature-card:hover .feature-icon {
+    animation: iconMorph 2s ease-in-out infinite;
+}
+
+/* Gradient border animation */
+@keyframes gradientBorder {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        45deg,
+        #667eea,
+        #764ba2,
+        #f093fb,
+        #ffd700,
+        #667eea
+    );
+    background-size: 400% 400%;
+    border-radius: var(--radius-xl);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    animation: gradientBorder 3s ease infinite;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+/* ===== PRICING CARDS ANIMATIONS ===== */
+
+/* Pulsating premium badge */
+@keyframes pulsatingGlow {
+    0%, 100% {
+        box-shadow: 
+            0 4px 20px rgba(255, 215, 0, 0.6),
+            0 0 40px rgba(255, 215, 0, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 8px 40px rgba(255, 215, 0, 0.8),
+            0 0 80px rgba(255, 215, 0, 0.6);
+        transform: scale(1.05);
+    }
+}
+
+.pricing-card.featured::before {
+    animation: pulsatingGlow 2s ease-in-out infinite;
+}
+
+/* Card elevation on hover */
+.pricing-card {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-20px) scale(1.02);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.08) translateY(-20px) rotateZ(1deg);
+}
+
+/* ===== BADGE ANIMATIONS ===== */
+
+/* Spinning achievement effect */
+@keyframes badgeSpin {
+    0% {
+        transform: rotateY(0deg) scale(1);
+    }
+    50% {
+        transform: rotateY(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotateY(360deg) scale(1);
+    }
+}
+
+.badge-item:hover .badge-icon {
+    animation: badgeSpin 1s ease-in-out;
+}
+
+/* Badge shine effect */
+@keyframes badgeShine {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.badge-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    background-size: 200% 100%;
+    animation: badgeShine 3s linear infinite;
+}
+
+/* ===== BUTTON ANIMATIONS ===== */
+
+/* Ripple effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.btn-primary::after,
+.pricing-button::after,
+.cta-nav::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.btn-primary:active::after,
+.pricing-button:active::after,
+.cta-nav:active::after {
+    width: 100px;
+    height: 100px;
+    animation: ripple 0.6s ease-out;
+}
+
+/* Magnetic button effect */
+.btn-primary,
+.pricing-button {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-primary:hover,
+.pricing-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 
+        0 20px 40px rgba(102, 126, 234, 0.3),
+        0 0 60px rgba(240, 147, 251, 0.3);
+}
+
+/* ===== SOCIAL ICONS ANIMATIONS ===== */
+
+/* Rotating social icons */
+@keyframes socialRotate {
+    0%, 100% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+}
+
+.social-icon:hover {
+    animation: socialRotate 0.6s ease-in-out;
+}
+
+/* Social icon glow */
+@keyframes socialGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(240, 147, 251, 0.8);
+    }
+}
+
+.social-icon:hover {
+    animation: socialGlow 1s ease-in-out infinite;
+}
+
+/* ===== SECTION BADGE ANIMATIONS ===== */
+
+/* Badge float */
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.section-badge {
+    animation: badgeFloat 2s ease-in-out infinite;
+    position: relative;
+}
+
+/* Badge pulse */
+@keyframes badgePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+}
+
+.section-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-full);
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+
+/* Parallax layers */
+@keyframes parallaxFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.features-container {
+    animation: parallaxFloat 10s ease-in-out infinite;
+}
+
+/* ===== STEP NUMBERS ANIMATION ===== */
+
+/* Rotating step numbers */
+@keyframes stepRotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.step:hover .step-number {
+    animation: stepRotate 1s ease-in-out;
+}
+
+/* Step number glow */
+@keyframes stepGlow {
+    0%, 100% {
+        box-shadow: 
+            0 4px 15px rgba(102, 126, 234, 0.3),
+            0 0 30px rgba(102, 126, 234, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 8px 30px rgba(102, 126, 234, 0.6),
+            0 0 60px rgba(240, 147, 251, 0.4);
+    }
+}
+
+.step-number {
+    animation: stepGlow 2s ease-in-out infinite;
+}
+
+/* ===== GAMIFICATION SECTION ===== */
+
+/* Constellation effect */
+@keyframes constellation {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+.gamification::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.8) 2px, transparent 2px);
+    background-size: 200px 200px;
+    animation: constellation 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in from left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in from right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale in */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply to elements when they come into view */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.scale-in {
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* ===== HOVER MAGNETIC EFFECT ===== */
+
+/* Для всех карточек */
+.feature-card,
+.pricing-card,
+.badge-item {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ===== CTA SECTION ANIMATIONS ===== */
+
+/* Pulsating background */
+@keyframes ctaPulsate {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.cta-section {
+    animation: ctaPulsate 5s ease-in-out infinite;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* GPU acceleration */
+.feature-card,
+.pricing-card,
+.badge-item,
+.phone-mockup,
+.feature-icon {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}

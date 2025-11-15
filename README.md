@@ -1,59 +1,59 @@
 <div align="center">
 
-# 💎 FinVerse — Вселенная Умных Финансов
+# 💎 FinVerse — Universe of Smart Finance
 
 <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge" />
 <img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge" />
 
-**Современная финтех-платформа для управления финансами, обучения и инвестирования**
+**Modern fintech platform for financial management, education, and investment**
 
-[🚀 Live Demo](https://finverse.vercel.app) • [📖 Документация](#-документация) • [🐛 Report Bug](https://github.com/atyakshev0405-star/Finverse/issues)
+[🚀 Live Demo](https://finverse-kappa.vercel.app) • [🐛 Report Bug](https://github.com/atyakshev0405-star/Finverse/issues)
 
 </div>
 
 ---
 
-## ✨ Особенности
+## ✨ Features
 
 <table>
 <tr>
 <td width="50%">
 
-### 💼 Умный учёт бюджета
-- 📊 Категоризация расходов
-- 🎯 Финансовые цели с прогрессом
-- 📈 Аналитика и графики
-- 💰 Бюджетирование по категориям
+### 💼 Smart Budget Management
+- 📊 Expense categorization
+- 🎯 Financial goals with progress tracking
+- 📈 Analytics and charts
+- 💰 Budget planning by categories
 
 </td>
 <td width="50%">
 
-### 🧠 Образование
-- 📚 50+ интерактивных курсов
-- ✅ Тесты и викторины
-- 🎓 Система уровней
-- 📊 Индекс финансовой грамотности
+### 🧠 Financial Education
+- 📚 50+ interactive courses
+- ✅ Tests and quizzes
+- 🎓 Level system
+- 📊 Financial literacy index
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 💹 Крипто-симулятор
-- 💎 Демо-портфель
-- 📉 Реальные цены (CoinGecko API)
-- 📊 Отслеживание P&L
-- 🔒 Безопасный просмотр
+### 💹 Crypto Simulator
+- 💎 Demo portfolio
+- 📉 Real-time prices (CoinGecko API)
+- 📊 P&L tracking
+- 🔒 Secure viewing
 
 </td>
 <td width="50%">
 
-### 🎮 Геймификация
-- ⭐ Система очков и бейджей
-- 🏆 Глобальные рейтинги
-- 🔥 Ежедневные челленджи
-- 👑 Достижения
+### 🎮 Gamification
+- ⭐ Points and badges system
+- 🏆 Global leaderboards
+- 🔥 Daily challenges
+- 👑 Achievements
 
 </td>
 </tr>
@@ -61,59 +61,59 @@
 
 ---
 
-## 🎨 Премиум Дизайн
+## 🎨 Premium Design
 
-- ✨ **Анимированные градиенты** — живой трехцветный фон
-- 💎 **Glassmorphism** — стеклянные эффекты
-- 🎭 **3D эффекты** — вращающиеся иконки и карточки
-- 🌈 **Glow эффекты** — свечение и цветные тени
-- ⚡ **Микро-анимации** — плавные transitions
-- 🎯 **Премиум типографика** — шрифт Montserrat
+- ✨ **Animated Gradients** — dynamic tri-color background
+- 💎 **Glassmorphism** — glass effects
+- 🎭 **3D Effects** — rotating icons and cards
+- 🌈 **Glow Effects** — luminous shadows
+- ⚡ **Micro-animations** — smooth transitions
+- 🎯 **Premium Typography** — Montserrat font
 
 ---
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### Локальная разработка
+### Local Development
 
 ```bash
-# 1. Клонируйте репозиторий
+# 1. Clone the repository
 git clone https://github.com/atyakshev0405-star/Finverse.git
 cd Finverse
 
-# 2. Откройте index.html в браузере
+# 2. Open index.html in your browser
 open index.html
 
-# ИЛИ запустите локальный сервер
+# OR run a local server
 python -m http.server 8000
-# Откройте http://localhost:8000
+# Open http://localhost:8000
 ```
 
 ---
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
 Finverse/
-├── 📄 index.html              # Главная страница
-├── 🎨 css/                    # Модульные стили
-│   ├── variables.css         # Дизайн-система
+├── 📄 index.html              # Main page
+├── 🎨 css/                    # Modular styles
+│   ├── variables.css         # Design system
 │   ├── reset.css            # CSS Reset
-│   ├── main.css             # Основные стили
-│   ├── navigation.css       # Навигация
-│   ├── hero.css             # Hero секция
+│   ├── main.css             # Core styles
+│   ├── navigation.css       # Navigation
+│   ├── hero.css             # Hero section
 │   ├── features.css         # Features
-│   ├── stats.css            # Статистика
-│   ├── pricing.css          # Тарифы
+│   ├── stats.css            # Statistics
+│   ├── pricing.css          # Pricing
 │   ├── footer.css           # Footer
-│   └── responsive.css       # Адаптивность
-├── ⚙️ js/                     # JavaScript модули
-│   ├── navigation.js        # Навигация
-│   ├── animations.js        # Анимации
-│   └── main.js              # Основная логика
-├── 🖼️ assets/                 # Ресурсы
-│   └── favicon.svg          # Иконка
-└── 📚 Документация
+│   └── responsive.css       # Responsive design
+├── ⚙️ js/                     # JavaScript modules
+│   ├── navigation.js        # Navigation
+│   ├── animations.js        # Animations
+│   └── main.js              # Main logic
+├── 🖼️ assets/                 # Resources
+│   └── favicon.svg          # Icon
+└── 📚 Documentation
     ├── STRUCTURE.md
     ├── DEPLOYMENT.md
     └── PREMIUM_UPGRADE.md
@@ -121,7 +121,7 @@ Finverse/
 
 ---
 
-## 🛠️ Технологии
+## 🛠️ Technologies
 
 <div align="center">
 
@@ -134,21 +134,21 @@ Finverse/
 
 ### Stack
 
-- **Frontend:** Чистый HTML5 + CSS3 + JavaScript (ES6+)
-- **Стили:** Модульный CSS с переменными
-- **Анимации:** CSS Animations + Intersection Observer
-- **Шрифты:** Montserrat (Google Fonts)
-- **Деплой:** Vercel
-- **Без зависимостей:** 0 npm packages в production
+- **Frontend:** Pure HTML5 + CSS3 + JavaScript (ES6+)
+- **Styling:** Modular CSS with variables
+- **Animations:** CSS Animations + Intersection Observer
+- **Fonts:** Montserrat (Google Fonts)
+- **Deployment:** Vercel
+- **Zero Dependencies:** 0 npm packages in production
 
 ---
 
-## 📊 Производительность
+## 📊 Performance
 
 <div align="center">
 
-| Метрика | Значение |
-|---------|----------|
+| Metric | Value |
+|--------|-------|
 | **Lighthouse Performance** | 95+ 🟢 |
 | **Lighthouse SEO** | 100 🟢 |
 | **Lighthouse Accessibility** | 90+ 🟢 |
@@ -160,46 +160,46 @@ Finverse/
 
 ---
 
-## 🎯 Основные фичи
+## 🎯 Key Features
 
-### 💎 Премиум анимации
+### 💎 Premium Animations
 
 ```css
-/* Пример: Анимированный градиент */
+/* Example: Animated gradient */
 @keyframes gradientShift {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
 }
 
-/* 3D вращение иконок */
+/* 3D icon rotation */
 .feature-card:hover .feature-icon {
     transform: rotateY(360deg) scale(1.1);
 }
 ```
 
-### 🎨 Дизайн-система
+### 🎨 Design System
 
 ```css
 :root {
-    /* Цвета */
+    /* Colors */
     --primary: #667eea;
     --secondary: #764ba2;
     --accent: #f093fb;
     --gold: #ffd700;
     
-    /* Градиенты */
+    /* Gradients */
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     
-    /* Типографика */
+    /* Typography */
     --font-family: 'Montserrat', sans-serif;
 }
 ```
 
 ---
 
-## 📱 Адаптивность
+## 📱 Responsive Design
 
-Полностью адаптивный дизайн для всех устройств:
+Fully responsive design for all devices:
 
 - 🖥️ **Desktop** — 1920px+
 - 💻 **Laptop** — 1024px - 1919px
@@ -208,9 +208,9 @@ Finverse/
 
 ---
 
-## 🎨 Кастомизация
+## 🎨 Customization
 
-### Изменить цвета
+### Change Colors
 
 ```css
 /* css/variables.css */
@@ -220,7 +220,7 @@ Finverse/
 }
 ```
 
-### Изменить шрифт
+### Change Font
 
 ```html
 <!-- index.html -->
@@ -231,49 +231,40 @@ Finverse/
 /* css/variables.css */
 --font-family: 'YOUR_FONT', sans-serif;
 ```
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 📖 Документация
+## 📄 License
 
-- 📘 [Структура проекта](STRUCTURE.md) — детальное описание
-- 🚀 [Руководство по деплою](DEPLOYMENT.md) — все способы развёртывания
-- 💎 [Премиум улучшения](PREMIUM_UPGRADE.md) — что добавлено в v2.0
+This project is licensed under the MIT License.
 
 ---
 
-## 🤝 Контрибьюция
-
-Приветствуются любые улучшения!
-
-1. Fork проекта
-2. Создайте feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit изменения (`git commit -m 'Add some AmazingFeature'`)
-4. Push в branch (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
-
----
-
-## 📄 Лицензия
-
-Этот проект лицензирован под MIT License.
-
----
-
-## 👨‍💻 Автор
+## 👨‍💻 Author
 
 **FinVerse Team**
 
 - GitHub: [@atyakshev0405-star](https://github.com/atyakshev0405-star)
-- Website: [finverse.vercel.app](https://finverse.vercel.app)
+- Website: [finverse-kappa.vercel.app](https://finverse-kappa.vercel.app)
 
 ---
 
-## 🙏 Благодарности
+## 🙏 Acknowledgments
 
-- [Google Fonts](https://fonts.google.com/) — Montserrat шрифт
-- [Vercel](https://vercel.com/) — бесплатный хостинг
-- [CoinGecko API](https://www.coingecko.com/) — крипто данные
+- [Google Fonts](https://fonts.google.com/) — Montserrat font
+- [Vercel](https://vercel.com/) — free hosting
+- [CoinGecko API](https://www.coingecko.com/) — crypto data
 
 ---
 
@@ -281,8 +272,8 @@ Finverse/
 
 **Made with ❤️ by FinVerse Team**
 
-⭐ Поставьте звезду если проект понравился!
+⭐ Star this repo if you found it helpful!
 
-[🚀 Live Demo](https://finverse.vercel.app)
+[🚀 Live Demo](https://finverse-kappa.vercel.app)
 
 </div>

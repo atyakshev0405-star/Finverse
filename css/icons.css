@@ -1,0 +1,449 @@
+/* Premium Icons - Pure CSS Geometric */
+
+/* ========== FEATURE ICONS ========== */
+.feature-icon {
+    position: relative;
+}
+
+/* Budget Icon */
+.icon-budget::before {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+.icon-budget::after {
+    content: '$';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 900;
+    color: #667eea;
+    z-index: 2;
+}
+
+/* Education Icon */
+.icon-education::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 24px solid white;
+    top: 38%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+.icon-education::after {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: white;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Crypto Icon */
+.icon-crypto::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 5px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.icon-crypto::after {
+    content: '₿';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+    z-index: 2;
+}
+
+/* Game Icon */
+.icon-game::before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 22px;
+    background: white;
+    border-radius: 11px 11px 4px 4px;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.icon-game::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #667eea;
+    border-radius: 50%;
+    top: 37%;
+    left: 38%;
+    box-shadow: 12px 0 0 0 #667eea;
+}
+
+/* Analytics Icon */
+.icon-analytics::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 20px;
+    background: white;
+    bottom: 18px;
+    left: 22px;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 11px 6px 0 0 white, 22px -4px 0 0 white;
+}
+.icon-analytics::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 32px;
+    background: white;
+    bottom: 18px;
+    right: 20px;
+    border-radius: 3px 3px 0 0;
+}
+
+/* Security Icon */
+.icon-security::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 34px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.icon-security::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 900;
+    color: #667eea;
+    z-index: 2;
+}
+
+/* ========== BADGE ICONS ========== */
+
+/* Goal Badge - Target */
+.badge-icon-goal {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.5), rgba(255, 165, 0, 0.3)) !important;
+    border-color: rgba(255, 215, 0, 0.6) !important;
+}
+.badge-icon-goal::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.4);
+    animation: targetPulse 2s ease-in-out infinite;
+}
+.badge-icon-goal::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Knowledge Badge - Book */
+.badge-icon-knowledge {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.3)) !important;
+    border-color: rgba(102, 126, 234, 0.6) !important;
+}
+.badge-icon-knowledge::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 42px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+.badge-icon-knowledge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    box-shadow: 
+        0 7px 0 0 rgba(102, 126, 234, 0.6),
+        0 14px 0 0 rgba(102, 126, 234, 0.6),
+        0 21px 0 0 rgba(102, 126, 234, 0.6);
+}
+
+/* Trader Badge - Diamond */
+.badge-icon-trader {
+    background: linear-gradient(135deg, rgba(240, 147, 251, 0.5), rgba(118, 75, 162, 0.3)) !important;
+    border-color: rgba(240, 147, 251, 0.6) !important;
+}
+.badge-icon-trader::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 28px solid white;
+    filter: drop-shadow(0 4px 12px rgba(240, 147, 251, 0.5));
+    animation: diamondFloat 3s ease-in-out infinite;
+}
+.badge-icon-trader::after {
+    content: '';
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 18px solid white;
+}
+
+/* Streak Badge - Lightning */
+.badge-icon-streak {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 100, 0, 0.3)) !important;
+    border-color: rgba(255, 165, 0, 0.6) !important;
+}
+.badge-icon-streak::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 40px;
+    background: white;
+    clip-path: polygon(50% 0%, 100% 35%, 60% 35%, 100% 100%, 0% 65%, 40% 65%);
+    filter: drop-shadow(0 4px 15px rgba(255, 165, 0, 0.8));
+    animation: lightningStrike 1.5s ease-in-out infinite;
+}
+
+/* Saver Badge - Trophy Star */
+.badge-icon-saver {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 193, 7, 0.4)) !important;
+    border-color: rgba(255, 215, 0, 0.8) !important;
+}
+.badge-icon-saver::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 36px;
+    background: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: drop-shadow(0 4px 15px rgba(255, 215, 0, 0.6));
+    animation: trophyFloat 3s ease-in-out infinite;
+}
+.badge-icon-saver::after {
+    content: '';
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 8px;
+    background: white;
+    border-radius: 0 0 9px 9px;
+}
+
+/* Master Badge - Crown */
+.badge-icon-master {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.7), rgba(255, 165, 0, 0.5)) !important;
+    border: 4px solid rgba(255, 215, 0, 1) !important;
+    box-shadow: 
+        0 12px 40px rgba(255, 215, 0, 0.5),
+        0 0 30px rgba(255, 215, 0, 0.4),
+        inset 0 2px 15px rgba(255, 255, 255, 0.5) !important;
+    animation: masterGlow 2s ease-in-out infinite;
+}
+.badge-icon-master::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 32px;
+    background: white;
+    clip-path: polygon(
+        50% 0%, 
+        65% 25%, 
+        95% 25%, 
+        75% 45%, 
+        85% 75%, 
+        50% 60%, 
+        15% 75%, 
+        25% 45%, 
+        5% 25%, 
+        35% 25%
+    );
+    filter: drop-shadow(0 4px 20px rgba(255, 215, 0, 0.8));
+    animation: crownBounce 3s ease-in-out infinite;
+}
+.badge-icon-master::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 10px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes targetPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes diamondFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-3px); }
+}
+
+@keyframes lightningStrike {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        filter: drop-shadow(0 4px 15px rgba(255, 165, 0, 0.8));
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.15);
+        filter: drop-shadow(0 6px 25px rgba(255, 165, 0, 1));
+    }
+}
+
+@keyframes trophyFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+@keyframes masterGlow {
+    0%, 100% {
+        box-shadow: 
+            0 12px 40px rgba(255, 215, 0, 0.5),
+            0 0 30px rgba(255, 215, 0, 0.4),
+            inset 0 2px 15px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 15px 50px rgba(255, 215, 0, 0.7),
+            0 0 50px rgba(255, 215, 0, 0.6),
+            inset 0 2px 20px rgba(255, 255, 255, 0.7);
+    }
+}
+
+@keyframes crownBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-3px); }
+}
+
+/* ========== SOCIAL ICONS ========== */
+.social-icon {
+    position: relative;
+}
+
+.social-icon-telegram::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.social-icon-youtube::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    background: white;
+    border-radius: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.social-icon-youtube::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid rgba(102, 126, 234, 0.8);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.social-icon-zen::before {
+    content: 'Я';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
